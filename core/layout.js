@@ -1,13 +1,13 @@
 class Layout { 
-    /*
-    *Layout is a class responsible for creating and resizing background behind every objects
-    *@param x: number;
-    *@param y: number;
-    *@param width: number;
-    *@param height: number;
-    *@param stroke: color p5.js;
-    *@param bgColor: color p5.js;
-    *@param transparent: boolean;
+    /** 
+    *   Layout is a class responsible for creating and resizing background behind every objects
+    *   @param x: number;
+    *   @param y: number;
+    *   @param width: number;
+    *   @param height: number;
+    *   @param stroke: color p5.js;
+    *   @param bgColor: color p5.js;
+    *   @param transparent: boolean;
     */
     constructor(x, y, width, height, strokeColor = color(4, 139, 172), bgColor = color(43, 48, 55)) { 
         this.x = x; // number

@@ -16,6 +16,10 @@ class ControllerBaseState {
         console.error("Instance has no implementation");
     }
 
+    mouseDragged() { 
+        console.error("Instance has no implementation");
+    }
+
     buttonPressed() {
         console.error("Instance has no implementation");
     }
