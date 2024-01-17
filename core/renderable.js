@@ -19,6 +19,7 @@ class Renderable {
     onDestroy() { 
        this.onDestroyBase();
     }
+    
     // Non overridable method
     onDestroyBase() { 
         Renderable.instances.splice(Renderable.instances.indexOf(this), 1);
