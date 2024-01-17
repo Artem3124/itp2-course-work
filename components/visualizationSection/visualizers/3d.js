@@ -42,11 +42,7 @@ class ThreeDimensional extends Visualizer {
         this.layer.background(216, 21, 22);
         const spectrum = this.audioAnalyzer.getSpectrum(this.amountOfElements);
 
-        // this.layer.rotateX(0.003);
-        // this.layer.rotateY(tan(PI / 8) / 400);
-        // this.layer.rotateZ(cos(PI / 3) / 100);
-        let r = 3;
-        this.layer.push();
+        let r = 3;        this.layer.push();
         this.layer.translate(this.camera.lookAt.x, this.camera.lookAt.y, this.camera.lookAt.z)
 
         //this.layer.translate(0, 0, -500);
@@ -59,7 +55,6 @@ class ThreeDimensional extends Visualizer {
                     0,
                     256,
                     1,
-                    //Math.sin((Math.pow(x / 2, 2) + Math.pow(y, 2)) / 2) * 300
                     (Math.sin(5*x) * Math.cos(5*y)) * 150
                 );
                 
