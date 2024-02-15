@@ -54,7 +54,7 @@ class CyberWall extends Visualizer {
             // in this step point by adding some calculated
             // value to vertex x variable.
             // Place vertex
-            stroke(spectrum, 255,255, 255);
+            stroke(spectrum, 255, 255);
 
             curveVertex(x, y);
           }
