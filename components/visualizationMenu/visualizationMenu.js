@@ -94,7 +94,7 @@ class VisualizationMenu extends ControllingComponent {
                 }
             )
         ];
-        this.setVisualization(3);
+        this.setVisualization(4);
     }
 
     setVisualization(id) {

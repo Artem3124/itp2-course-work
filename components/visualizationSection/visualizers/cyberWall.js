@@ -4,6 +4,7 @@ class CyberWall extends Visualizer {
     #minAmplitude;
     #maxAmplitude;
     #h;
+    
     constructor(id, layout) {
         super(id, layout);
     }
@@ -32,7 +33,7 @@ class CyberWall extends Visualizer {
           const [ xStart, yStart ] = start;
           const [ xEnd, yEnd ] = end;
           
-          let impulseInitiatedLinesAgo = 0;
+          //let impulseInitiatedLinesAgo = 0;
           // Create a line by walking N steps and interpolating
           // from start to end point at each interval
           beginShape();
@@ -49,21 +50,12 @@ class CyberWall extends Visualizer {
             
             // Offset X position by noise
             x += (noise(t * frequency, v * frequency, time)) * amplitude;
-
-            //let col = lerpColor(color(255), color(255 - map(spectrum, 0, 255, 0, 140), 255 - spectrum, 255), t)
             // track the energy value and create an impulse
             // in this step point by adding some calculated
             // value to vertex x variable.
             // Place vertex
-            stroke(spectrum, 255,255, 255);
-            //stroke(col)
-            // if (energy > 0 && spectrum > y && impulseInitiatedLinesAgo >= 0) { 
-            //     impulseInitiatedLinesAgo = 2;
-            //     vertex(x + x * energy, y)
-            //     impulseInitiatedLinesAgo--;
-            // } else { 
-            //     vertex(x, y);
-            // }
+            stroke(spectrum, 255, 255);
+
             curveVertex(x, y);
           }
           vertex(xEnd, yEnd);

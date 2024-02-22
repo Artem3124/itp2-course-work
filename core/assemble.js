@@ -3,9 +3,9 @@ class Assemble {
     #playlist;
     #visualizationMenu;
     #controllerContext;
-    /*
-    Main class which unites all the infrastructure
-    @param loadedSongs: p5.SoundFile[] - predefined list of songs.
+    /** 
+    * Main class which unites all the infrastructure
+    * @param loadedSongs: p5.SoundFile[] - predefined list of songs.
     */
     constructor(loadedSongs) {
         this.#renderer = new Renderer();
@@ -37,6 +37,10 @@ class Assemble {
 
     mouseClicked() { 
         this.#controllerContext.mouseClicked();
+    }
+
+    mouseDragged() { 
+        this.#controllerContext.mouseDragged();
     }
 
     buttonPressed() { 

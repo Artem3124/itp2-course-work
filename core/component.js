@@ -1,5 +1,5 @@
 class Component extends Renderable {
-    /*
+    /**
      *This class needed to bound all objects that will have their own space on the canvas
      *@param layout: { width: number, length: number, stroke: color() p5.js, bgColor: color() p5.js, x: number, y: number};
      *@param items: Item[];

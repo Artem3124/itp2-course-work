@@ -14,7 +14,7 @@ class ControllerContext {
         for (let i = 0; i < Renderable.instances.length; i++) { 
             if (instances[i] instanceof ControllingComponent) { 
                 if (this.#isInBorders(instances[i].layout)) { 
-                    this.changeController(instances[i].controller);
+                    this.changeController(instances[i]?.controller);
                 }
             }
         }
@@ -38,6 +38,10 @@ class ControllerContext {
 
     mouseClicked() { 
         this.#state.mouseClicked();
+    }
+
+    mouseDragged() { 
+        this.#state.mouseDragged();
     }
 
     buttonPressed() { 

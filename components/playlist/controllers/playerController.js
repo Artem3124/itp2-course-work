@@ -1,4 +1,10 @@
 class PlayerController extends ControllerBaseState {
+    /** 
+    * Controller class fires an appropriate action, when items
+    * touched in controller's borders. 
+    * @param component: Component
+    *  
+    */
     constructor(component) {
         super(component);
     }

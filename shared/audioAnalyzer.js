@@ -22,8 +22,8 @@ class AudioAnalyzer {
         return this.#instance;
     }
 
-    getWaveForm() { 
-        return AudioAnalyzer.#fft.waveform()
+    getWaveForm(bins = 1024) { 
+        return AudioAnalyzer.#fft.waveform(bins)
     }
 
     getSpectrum(bins = 1024) { 
