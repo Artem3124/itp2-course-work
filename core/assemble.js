@@ -46,4 +46,8 @@ class Assemble {
     buttonPressed() { 
         this.#controllerContext.buttonPressed();
     }
+
+    resize() { 
+       this.#renderer.resizeAll();
+    }
 }

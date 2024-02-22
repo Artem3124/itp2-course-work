@@ -15,6 +15,7 @@ class ThreeDimensional extends Visualizer {
 
         this.layer.colorMode(HSB);
        
+
         //size of a cube
         this.d = 10;
         this.layer.angleMode(DEGREES);

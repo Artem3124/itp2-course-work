@@ -25,76 +25,74 @@ class VisualizationMenu extends ControllingComponent {
                 0,
                 {
                     x: this.layout.x,
-                    y:
-                        this.layout.y +
-                        0.2 * this.layout.height,
+                    y: this.layout.y + 0.2 * this.layout.height,
                     width: 0.2 * this.layout.width,
                     height: 0.2 * this.layout.height,
                     ...[],
                 }
             ),
-            new VisualizationMenuItem(
-                new Spectrum(
-                    1,
-                    this.visualizationSection.layout
-                ),
-                "Spectrum",
-                1,
-                {
-                    x: this.layout.x,
-                    y: this.layout.y + 2 *(0.2 * this.layout.height),
-                    width: 0.2 * this.layout.width,
-                    height: 0.2 * this.layout.height,
-                    ...[],
-                }
-            ),
-            new VisualizationMenuItem(
-                new WavePattern(
-                    2,
-                    this.visualizationSection.layout
-                ),
-                "WavePattern",
-                2,
-                {
-                    x: this.layout.x,
-                    y: this.layout.y + 3 *(0.2 * this.layout.height),
-                    width: 0.2 * this.layout.width,
-                    height: 0.2 * this.layout.height,
-                    ...[],
-                }
-            ),
-            new VisualizationMenuItem(
-                new CyberWall(
-                    3,
-                    this.visualizationSection.layout
-                ),
-                "CyberWave",
-                3,
-                {
-                    x: this.layout.x,
-                    y: this.layout.y + 4 *(0.2 * this.layout.height),
-                    width: 0.2 * this.layout.width,
-                    height: 0.2 * this.layout.height,
-                    ...[],
-                }
-            ),
-            new VisualizationMenuItem(
-                new ThreeDimensional(
-                    4, 
-                    this.visualizationSection.layout
-                ),
-                "ThreeDimensional",
-                4,
-                {
-                    x: this.layout.x + 0.2 * this.layout.width,
-                    y: this.layout.y + (0.2 * this.layout.height),
-                    width: 0.2 * this.layout.width,
-                    height: 0.2 * this.layout.height,
-                    ...[]
-                }
-            )
+            //            new VisualizationMenuItem(
+            //                new Spectrum(
+            //                    1,
+            //                    this.visualizationSection.layout
+            //                ),
+            //                "Spectrum",
+            //                1,
+            //                {
+            //                    x: this.layout.x,
+            //                    y: this.layout.y + 2 *(0.2 * this.layout.height),
+            //                    width: 0.2 * this.layout.width,
+            //                    height: 0.2 * this.layout.height,
+            //                    ...[],
+            //                }
+            //            ),
+            //            new VisualizationMenuItem(
+            //                new WavePattern(
+            //                    2,
+            //                    this.visualizationSection.layout
+            //                ),
+            //                "WavePattern",
+            //                2,
+            //                {
+            //                    x: this.layout.x,
+            //                    y: this.layout.y + 3 *(0.2 * this.layout.height),
+            //                    width: 0.2 * this.layout.width,
+            //                    height: 0.2 * this.layout.height,
+            //                    ...[],
+            //                }
+            //            ),
+            //            new VisualizationMenuItem(
+            //                new CyberWall(
+            //                    3,
+            //                    this.visualizationSection.layout
+            //                ),
+            //                "CyberWave",
+            //                3,
+            //                {
+            //                    x: this.layout.x,
+            //                    y: this.layout.y + 4 *(0.2 * this.layout.height),
+            //                    width: 0.2 * this.layout.width,
+            //                    height: 0.2 * this.layout.height,
+            //                    ...[],
+            //                }
+            //            ),
+            //            new VisualizationMenuItem(
+            //                new ThreeDimensional(
+            //                    4, 
+            //                    this.visualizationSection.layout
+            //                ),
+            //                "ThreeDimensional",
+            //                4,
+            //                {
+            //                    x: this.layout.x + 0.2 * this.layout.width,
+            //                    y: this.layout.y + (0.2 * this.layout.height),
+            //                    width: 0.2 * this.layout.width,
+            //                    height: 0.2 * this.layout.height,
+            //                    ...[]
+            //                }
+            //            )
         ];
-        this.setVisualization(4);
+        this.setVisualization(0);
     }
 
     setVisualization(id) {
