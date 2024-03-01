@@ -9,7 +9,7 @@ class Assemble {
     */
     constructor(loadedSongs) {
         this.#renderer = new Renderer();
-        
+
         this.#visualizationMenu = new VisualizationMenu({
             x: 0,
             y: 0.75 * height,
@@ -21,7 +21,7 @@ class Assemble {
         this.#playlist = new Playlist({
             x: width - 301,
             y: 0.2 * height,
-            width: 300,
+            width: 301,
             height: 0.8 * height,
             strokeColor: undefined,
             bgColor: undefined,
@@ -35,15 +35,36 @@ class Assemble {
         this.#controllerContext.trackMouse();
     }
 
-    mouseClicked() { 
+    mouseClicked() {
         this.#controllerContext.mouseClicked();
     }
 
-    mouseDragged() { 
+    mouseDragged() {
         this.#controllerContext.mouseDragged();
     }
 
-    buttonPressed() { 
+    buttonPressed() {
         this.#controllerContext.buttonPressed();
     }
+
+    resize(width, height) {
+        //this.#resizePlaylistLayout(width, height);
+        //this.#resizeVisualizationMenu(width, height);
+        this.#renderer.resizeAll();
+    }
+
+    #resizePlaylistLayout(width, height) {
+        this.#playlist.layout.x = width - 301;
+        this.#playlist.layout.y = 0.2 * height;
+        this.#playlist.layout.width = 301;
+        this.#playlist.layout.height = 0.8 * height;
+    }
+
+    #resizeVisualizationMenu(width, height) {
+        this.#visualizationMenu.layout.x = 0;
+        this.#visualizationMenu.layout.y = 0.75 * height;
+        this.#visualizationMenu.layout.width = width - 301;
+        this.#visualizationMenu.layout.height = 0.25 * height;
+    }
+
 }

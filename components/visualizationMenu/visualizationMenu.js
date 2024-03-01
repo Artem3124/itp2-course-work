@@ -25,9 +25,7 @@ class VisualizationMenu extends ControllingComponent {
                 0,
                 {
                     x: this.layout.x,
-                    y:
-                        this.layout.y +
-                        0.2 * this.layout.height,
+                    y: this.layout.y + 0.2 * this.layout.height,
                     width: 0.2 * this.layout.width,
                     height: 0.2 * this.layout.height,
                     ...[],
@@ -42,7 +40,7 @@ class VisualizationMenu extends ControllingComponent {
                 1,
                 {
                     x: this.layout.x,
-                    y: this.layout.y + 2 *(0.2 * this.layout.height),
+                    y: this.layout.y + 2 * (0.2 * this.layout.height),
                     width: 0.2 * this.layout.width,
                     height: 0.2 * this.layout.height,
                     ...[],
@@ -57,7 +55,7 @@ class VisualizationMenu extends ControllingComponent {
                 2,
                 {
                     x: this.layout.x,
-                    y: this.layout.y + 3 *(0.2 * this.layout.height),
+                    y: this.layout.y + 3 * (0.2 * this.layout.height),
                     width: 0.2 * this.layout.width,
                     height: 0.2 * this.layout.height,
                     ...[],
@@ -72,7 +70,7 @@ class VisualizationMenu extends ControllingComponent {
                 3,
                 {
                     x: this.layout.x,
-                    y: this.layout.y + 4 *(0.2 * this.layout.height),
+                    y: this.layout.y + 4 * (0.2 * this.layout.height),
                     width: 0.2 * this.layout.width,
                     height: 0.2 * this.layout.height,
                     ...[],
@@ -80,7 +78,7 @@ class VisualizationMenu extends ControllingComponent {
             ),
             new VisualizationMenuItem(
                 new ThreeDimensional(
-                    4, 
+                    4,
                     this.visualizationSection.layout
                 ),
                 "ThreeDimensional",
@@ -94,7 +92,7 @@ class VisualizationMenu extends ControllingComponent {
                 }
             )
         ];
-        this.setVisualization(4);
+        this.setVisualization(0);
     }
 
     setVisualization(id) {
@@ -105,6 +103,13 @@ class VisualizationMenu extends ControllingComponent {
 
     render() {
         this.renderHeader();
+    }
+
+    resize() {
+        this.layout.x = 0;
+        this.layout.y = 0.75 * height;
+        this.layout.width = width - 301;
+        this.layout.height = 0.25 * height;
     }
 
     renderHeader() {

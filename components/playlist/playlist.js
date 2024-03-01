@@ -18,10 +18,19 @@ class Playlist extends ControllingComponent {
         this.#player.setCurrentTrack(this.items[id]);
     }
 
-    uploadTracks(loadedSongs) { 
+    uploadTracks(loadedSongs) {
         this.#initializeAudioElementList(loadedSongs);
         this.#player.setTracks(this.items);
     }
+
+
+    resize() {
+        this.layout.x = width - 301;
+        this.layout.y = 0.2 * height;
+        this.layout.width = 301;
+        this.layout.height = 0.8 * height;
+    }
+
 
     #initializeAudioElementList(inputLoadedSongs) {
         for (let i = 0; i < inputLoadedSongs.length; i++) {

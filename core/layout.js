@@ -27,4 +27,13 @@ class Layout {
         stroke(this.strokeColor);
         rect(this.x, this.y, this.width, this.height);
     }
+
+    resize(width, height) { 
+        this.width = width;
+        this.height = height;
+
+        fill(this.bgColor);
+        stroke(this.strokeColor);
+        rect(this.x, this.y, this.width, this.height);
+    }
 }

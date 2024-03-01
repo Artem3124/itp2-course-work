@@ -24,13 +24,13 @@ class Player extends ControllingComponent {
                     (2 * this.layout.height) / 3 +
                     20,
             },
-            nextTrackButton: { 
+            nextTrackButton: {
                 left: this.layout.x + (2 * this.layout.width) / 3,
                 top: this.layout.y + (2 * this.layout.height) / 3,
                 right: (this.layout.x + (2 * this.layout.width) / 3) + 40,
                 bottom: (this.layout.y + (2 * this.layout.height) / 3) + 20,
             },
-            previousTrackButton: { 
+            previousTrackButton: {
                 left: this.layout.x + this.layout.width / 3 - 40,
                 top: this.layout.y + (2 * this.layout.height) / 3,
                 right: (this.layout.x + this.layout.width / 3),
@@ -40,20 +40,20 @@ class Player extends ControllingComponent {
             (this.controller = new PlayerController(this));
     }
 
-    nextTrack() { 
+    nextTrack() {
         const currentIndex = this.#trackCollection.indexOf(this.#currentTrack);
 
-        if (currentIndex == this.#trackCollection.length - 1) { 
+        if (currentIndex == this.#trackCollection.length - 1) {
             return;
         }
 
         this.setCurrentTrack(this.#trackCollection[currentIndex + 1]);
     }
 
-    previousTrack() { 
+    previousTrack() {
         const currentIndex = this.#trackCollection.indexOf(this.#currentTrack);
-        
-        if (currentIndex == 0) { 
+
+        if (currentIndex == 0) {
             return;
         }
 
@@ -66,18 +66,18 @@ class Player extends ControllingComponent {
         if (this.isPlaying) {
             this.#stopPlaying();
         }
-        
+
         this.#currentTrack?.selectOrUnselect();
         this.#currentTrack = currentTrack;
         this.#audioAnalyzer.setAudio(currentTrack);
         this.#currentTrack.selectOrUnselect();
 
-        if (isPlayingBefore) { 
+        if (isPlayingBefore) {
             this.#startPlaying();
         }
     }
 
-    setTracks(tracks) { 
+    setTracks(tracks) {
         this.#trackCollection = tracks;
         this.setCurrentTrack(this.#trackCollection[0]);
     }
@@ -97,11 +97,53 @@ class Player extends ControllingComponent {
         this.#renderControlBar();
     }
 
-    #renderTrackData() { 
+    resize() {
+        this.layout.x = windowWidth - 301;
+        this.layout.y = 0;
+        this.layout.width = 301;
+        this.layout.height = 0.2 * windowHeight;
+        this.calculateBorders();
+    }
+
+    calculateBorders() {
+        this.itemsBorders = {
+            playButton: {
+                left:
+                    this.layout.x +
+                    this.layout.width / 2 -
+                    10,
+                top:
+                    this.layout.y +
+                    (2 * this.layout.height) / 3,
+                right:
+                    this.layout.x +
+                    this.layout.width / 2 +
+                    10,
+                bottom:
+                    this.layout.y +
+                    (2 * this.layout.height) / 3 +
+                    20,
+            },
+            nextTrackButton: {
+                left: this.layout.x + (2 * this.layout.width) / 3,
+                top: this.layout.y + (2 * this.layout.height) / 3,
+                right: (this.layout.x + (2 * this.layout.width) / 3) + 40,
+                bottom: (this.layout.y + (2 * this.layout.height) / 3) + 20,
+            },
+            previousTrackButton: {
+                left: this.layout.x + this.layout.width / 3 - 40,
+                top: this.layout.y + (2 * this.layout.height) / 3,
+                right: (this.layout.x + this.layout.width / 3),
+                bottom: (this.layout.y + (2 * this.layout.height) / 3) + 20,
+            }
+        };
+    }
+
+    #renderTrackData() {
         fill(233, 235, 237);
         textSize(20);
         stroke(0);
-        text(this.#currentTrack.name, this.layout.x + this.layout.width/3, this.layout.y + 1.5 * this.layout.height / 3);
+        text(this.#currentTrack.name, this.layout.x + this.layout.width / 3, this.layout.y + 1.5 * this.layout.height / 3);
     }
 
     #startPlaying() {
@@ -121,7 +163,7 @@ class Player extends ControllingComponent {
             this.#renderStopButton(
                 this.layout.x + this.layout.width / 2 - 10,
                 this.layout.y +
-                    (2 * this.layout.height) / 3,
+                (2 * this.layout.height) / 3,
                 20,
                 20
             );
@@ -129,7 +171,7 @@ class Player extends ControllingComponent {
             this.#renderPlayButton(
                 this.layout.x + this.layout.width / 2 - 10,
                 this.layout.y +
-                    (2 * this.layout.height) / 3,
+                (2 * this.layout.height) / 3,
                 20,
                 20
             );
@@ -201,4 +243,5 @@ class Player extends ControllingComponent {
             y + height
         );
     }
+
 }

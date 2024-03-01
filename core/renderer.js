@@ -25,10 +25,14 @@ class Renderer {
     }
     
     resizeAll() { 
-        for(let i = 0; i < this.objectsToRender.length; i++) { 
-            let object = this.objectsToRender[i];
+        const objToRender = Renderable.instances;
+        for(let i = 0; i < objToRender.length; i++) { 
+            let object = objToRender[i];
+            if (this.#isComponent(object)) { 
+                object.renderLayout();
+            }
 
-            if (this.#isRenderable(object)) {
+            if (this.#isRenderable(object)) { 
                 object.resize();
             }
         }
