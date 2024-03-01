@@ -31,9 +31,9 @@ class Component extends Renderable {
         this.layout.render();
     }
 
-//    resize() {
-//        
-//    }
+    resize() {
+        
+    }
 
 
     onDestroy() {

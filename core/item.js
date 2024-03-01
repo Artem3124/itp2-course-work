@@ -38,11 +38,22 @@ class Item extends NonControllingComponent {
         }
     }
 
+    calculateBorders() { 
+        this.borders = { 
+            left: this.layout.x,
+            top: this.layout.y,
+            right: this.layout.x + this.layout.width,
+            bottom: this.layout.y + this.layout.height
+        }
+    }
+
     render() {
         this.layout.render();
         textSize(18);
         stroke(0);
         this.selectedUnselectedRender();
+        rect(this.borders.left, this.borders.top, this.borders.right - this.borders.left, this.borders.bottom - this.borders.top);
+        stroke(0,0,0);
         fill(233, 235, 237);
         text(
             this.name,

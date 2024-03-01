@@ -16,4 +16,11 @@ class VisualizationSection extends ControllingComponent {
     render() {
         this.#currentVisualizer.visualizer.visualize();
     }
+
+    resize() {
+        this.layout.x = 0;
+        this.layout.y = 0;
+        this.layout.width = width - 301;
+        this.layout.height = 0.75 * height;
+    }
 }

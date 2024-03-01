@@ -42,9 +42,8 @@ function mouseDragged() {
 //when the window has been resized. Resize canvas to fit
 //if the visualisation needs to be resized call its onResize method
 function windowResized() {
-    console.log(windowWidth, windowHeight);
     resizeCanvas(windowWidth, windowHeight);
     // create resize function in each Menu class that will
     // reculculate positions of the elements inside 
-    this.program.resize();
+    this.program.resize(windowWidth, windowHeight);
 }
