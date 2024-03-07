@@ -4,6 +4,7 @@ var controls = null;
 var vis = null;
 //variable for the p5 sound object
 var sound = null;
+var sound1 = null;
 //variable for p5 fast fourier transform
 var fourier;
 
