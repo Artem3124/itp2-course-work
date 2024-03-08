@@ -1,21 +1,27 @@
-class Visualizer  { 
-    /*
-    Abstract class to describe behavior and state of visualizer
-    * @params id: number;
-    * @params layout: Layout; 
+// Abstract class to describe the behavior and state of a visualizer
+class Visualizer {
+    /** 
+    * Constructor function for Visualizer.
+    * 
+    * Initializes the visualizer with an ID and layout.
+    * 
+    * @param {number} id - The ID of the visualizer.
+    * @param {Layout} layout - The layout of the visualizer.
     */
-    constructor(id, layout) { 
+    constructor(id, layout) {
         this.layout = layout;
         this.audioAnalyzer = AudioAnalyzer.getInstance();
         this.frequencyBins = ["bass", "lowMid", "highMid", "treble"];
         this.id = id;
     }
 
-    visualize() { 
-        
+    // Abstract method to visualize audio data
+    visualize() {
+
     }
 
-    setup() { 
-        
+    // Abstract method to set up the visualizer
+    setup() {
+
     }
 }
