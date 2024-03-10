@@ -1,5 +1,5 @@
 // Base controller class, dynamically created for each controllable component,
-// if the controllable class has no concrete controllers
+// if the controllable class has no specific controllers
 class ControllerBaseState {
     /* 
      * Constructor function for ControllerBaseState.
