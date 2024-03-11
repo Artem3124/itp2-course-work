@@ -18,6 +18,10 @@ class VisualizationSection extends ControllingComponent {
      * @param {Visualization} visualization - The visualization to set.
      */
     setVisualization(visualization) {
+        if (!this.isVisualizationMenuItem(visualization)) {
+            throw new Error("Invalid variable type: visualization must be of type VisualizationMenuItem.");
+        }
+
         // Deselect the current visualizer if exists
         this.#currentVisualizer?.selectOrUnselect();
         // Set the new visualization
@@ -45,4 +49,9 @@ class VisualizationSection extends ControllingComponent {
         this.layout.width = width - 301;
         this.layout.height = 0.75 * height;
     }
+
+    isVisualizationMenuItem(visualizer) { 
+        return visualizer instanceof VisualizationMenuItem; 
+    }
 }
+
