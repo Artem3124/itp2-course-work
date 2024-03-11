@@ -1,8 +1,12 @@
 class NonControllingComponent extends Component {
     /*
-    * Non controlling component is extended by all the components that do not have any 
-    * controllable items inside and doesn't affect by controller.
+    * Non controlling component is extended by all 
+    * the components that do not have any 
+    * controllable items inside and doesn't 
+    * affect by controller.
+    *
     * Layout model parameter.
+    *
     * @params layout: {
     *    x: number, - location of x coordinate,
     *    y: number, - location of y coordinate,

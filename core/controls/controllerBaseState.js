@@ -1,29 +1,51 @@
+// Base controller class, dynamically created for each controllable component,
+// if the controllable class has no specific controllers
 class ControllerBaseState {
-    /* Base controller class, dynamically created for each controllable component, 
-     *   if controllable class has no concrete controllers
-     * Instance of ControllableComponent class
-     * @params component: ControllableComponent
+    /* 
+     * Constructor function for ControllerBaseState.
+     * 
+     * @param {ControllableComponent} component - Instance of ControllableComponent class.
      */
     constructor(component) {
         this.component = component;
     }
 
+    /**
+     * Function to set the context.
+     * 
+     * @param {Object} context - The context to set.
+     */
     setContext(context) {
         this.context = context;
     }
 
+    /**
+     * Function to handle mouse click event.
+     */
     mouseClicked() {
         console.error("Instance has no implementation");
     }
 
-    mouseDragged() { 
+    /**
+     * Function to handle mouse dragged event.
+     */
+    mouseDragged() {
         console.error("Instance has no implementation");
     }
 
+    /**
+     * Function to handle button pressed event.
+     */
     buttonPressed() {
         console.error("Instance has no implementation");
     }
 
+    /**
+     * Function to check if the mouse is in the border of a collection of elements.
+     * 
+     * @param {Array} collection - The collection of elements to check.
+     * @returns {number} - The index of the element if the mouse is in its border, otherwise -1.
+     */
     someIsInBorder(collection) {
         for (let i = 0; i < collection.length; i++) {
             if (
@@ -38,7 +60,13 @@ class ControllerBaseState {
 
         return -1;
     }
-    // general border for determining 
+
+    /**
+     * Function to check if the mouse is in the border of a specific element.
+     * 
+     * @param {string} elementName - The name of the element.
+     * @returns {boolean} - True if the mouse is in the border of the element, otherwise false.
+     */
     isInBorder(elementName) {
         return (
             mouseX >
