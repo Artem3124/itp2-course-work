@@ -1,7 +1,9 @@
 class ControllingComponent extends Component {
     /*
-    *   Controlling component is extended by all the components that do have controllable items 
-    *   inside as well as the controllers.
+    * Controlling component is extended by all the components 
+    * that do have controllable items 
+    * inside as well as the controllers.
+    *
     * Layout model parameter.
     * @params layout: {
     *    x: number, - location of x coordinate,
@@ -31,13 +33,13 @@ class ControllingComponent extends Component {
     }
 
     // General method for settings controllable/ manageable items.
-    setItems(items) { 
+    setItems(items) {
         this.items = items;
         this.setItem(items[0]);
     }
 
     // General method for setting a single item.
-    setItem(item) { 
+    setItem(item) {
         this.currentItem = item;
-    } 
+    }
 }
