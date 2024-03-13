@@ -9,7 +9,7 @@ a Fast Fourier Transform object. Take a look at its description in the
 
 ### How to run
 
-Fork this repo, and run *live-server .* using terminal with [live server](https://www.npmjs.com/package/live-server) or with visual studio [LiveServer](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension open index.html
+Fork this repo, and run *live-server .* using terminal with [live server](https://www.npmjs.com/package/live-server) or with vs code [LiveServer](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension open index.html
 
 ### Tests 
 In jasmine folder run SpecRunner.html with [LiveServer](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).
