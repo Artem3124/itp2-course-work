@@ -7,6 +7,10 @@ To turn the sound into something that can be visualised p5.js provides
 a Fast Fourier Transform object. Take a look at its description in the
 [p5.sound documentation](https://p5js.org/reference/#/p5.FFT).
 
+## Features
+
+I implemented fully functional WEB-UI without using any html flags, i.e. I created the rendering system written in pure p5.js. Kind of useless, but I really wanted to get some extra marks in uni. 
+
 ### UML Class Diagram
 ![image](https://github.com/Artem3124/itp2-course-work/assets/101733343/d4cb87d7-d02e-49bd-952b-aaaa43148aec)
 
