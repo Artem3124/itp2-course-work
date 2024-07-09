@@ -7,8 +7,10 @@ To turn the sound into something that can be visualised p5.js provides
 a Fast Fourier Transform object. Take a look at its description in the
 [p5.sound documentation](https://p5js.org/reference/#/p5.FFT).
 
-### How to run
+### UML Class Diagram
+![image](https://github.com/Artem3124/itp2-course-work/assets/101733343/d4cb87d7-d02e-49bd-952b-aaaa43148aec)
 
+### How to run
 Fork this repo, and run *live-server .* using terminal with [live server](https://www.npmjs.com/package/live-server) or with vs code [LiveServer](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension open index.html
 
 ### Tests 
